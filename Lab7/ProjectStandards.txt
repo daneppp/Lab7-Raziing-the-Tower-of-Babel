@@ -1,0 +1,15 @@
+Team Standards Writing doc for Wing Watch
+
+We need 12 or more standards for our project's code
+
+
+Atticus
+
+
+Rachin
+
+
+Sierra
+
+
+Dane 

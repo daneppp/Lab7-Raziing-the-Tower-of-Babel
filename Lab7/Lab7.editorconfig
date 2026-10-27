@@ -1,0 +1,88 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+# C# files
+[*.cs]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+
+
+# New line preferences
+
+
+#### .NET Coding Conventions ####
+
+# Organize usings
+
+
+# this. and Me. preferences
+
+
+# Language keywords vs BCL types preferences
+
+# Parentheses preferences
+
+
+# Modifier preferences
+
+
+# Expression-level preferences
+
+
+# Field preferences
+
+
+# Parameter preferences
+
+
+# Suppression preferences
+
+
+# New line preferences
+
+#### C# Coding Conventions ####
+
+# var preferences
+
+# Expression-bodied members
+
+
+# Pattern matching preferences
+
+
+# Null-checking preferences
+
+
+# Modifier preferences
+
+# Code-block preferences
+
+# Expression-level preferences
+
+# 'using' directive preferences
+
+
+# New line preferences
+
+#### C# Formatting Rules ####
+
+# New line preferences
+
+# Indentation preferences
+
+
+# Space preferences
+
+# Wrapping preferences
+
+#### Naming styles ####
+
+# Naming rules
+
+
+# Symbol specifications
+
+
+# Naming styles
