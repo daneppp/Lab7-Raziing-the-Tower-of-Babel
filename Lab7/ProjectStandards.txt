@@ -10,6 +10,28 @@ Rachin
 
 
 Sierra
+1. Capitalization: PascalCase for classes and methods, camelCase for local variables (SAM)
 
+Bad: public class userService { void loadItems() { int ItemCount = 0; } }
+Good: public class UserService { void LoadItems() { int itemCount = 0; } }
+
+2. Braces: Always use braces, even for one-line if statements (SAM)
+
+Bad: if (isValid) Save();
+Good:
+  if (isValid)
+  {
+      Save();
+  }
+
+3. Private fields: Start with an underscore and use camelCase (SAM)
+
+Bad: private string UserName;
+Good: private string _userName;
+
+4. Interfaces: Start with a capital I (SAM)
+
+Bad: public interface DataService
+Good: public interface IDataService
 
 Dane 

@@ -7,9 +7,15 @@ root = true
 #### Core EditorConfig Options ####
 
 # Indentation and spacing
+# SAM
+indent_style = space
+# SAM
+indent_size = 4
 
 
 # New line preferences
+# SAM
+csharp_new_line_before_open_brace = all
 
 
 #### .NET Coding Conventions ####
@@ -58,6 +64,8 @@ root = true
 # Modifier preferences
 
 # Code-block preferences
+# SAM
+csharp_prefer_braces = true:warning
 
 # Expression-level preferences
 
@@ -80,9 +88,55 @@ root = true
 #### Naming styles ####
 
 # Naming rules
+# SAM
+dotnet_naming_rule.types_methods_pascal.severity = warning
+# SAM
+dotnet_naming_rule.types_methods_pascal.symbols = types_methods
+# SAM
+dotnet_naming_rule.types_methods_pascal.style = pascal_case
+# SAM
+dotnet_naming_rule.locals_camel.severity = warning
+# SAM
+dotnet_naming_rule.locals_camel.symbols = locals
+# SAM
+dotnet_naming_rule.locals_camel.style = camel_case
+# SAM
+dotnet_naming_rule.private_fields_underscore.severity = warning
+# SAM
+dotnet_naming_rule.private_fields_underscore.symbols = private_fields
+# SAM
+dotnet_naming_rule.private_fields_underscore.style = underscore_camel
+# SAM
+dotnet_naming_rule.interfaces_i.severity = warning
+# SAM
+dotnet_naming_rule.interfaces_i.symbols = interfaces
+# SAM
+dotnet_naming_rule.interfaces_i.style = i_prefix
 
 
 # Symbol specifications
+# SAM
+dotnet_naming_symbols.types_methods.applicable_kinds = class, struct, interface, enum, method, property
+# SAM
+dotnet_naming_symbols.locals.applicable_kinds = local, parameter
+# SAM
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+# SAM
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+# SAM
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
 
 
 # Naming styles
+# SAM
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+# SAM
+dotnet_naming_style.camel_case.capitalization = camel_case
+# SAM
+dotnet_naming_style.underscore_camel.capitalization = camel_case
+# SAM
+dotnet_naming_style.underscore_camel.required_prefix = _
+# SAM
+dotnet_naming_style.i_prefix.capitalization = pascal_case
+# SAM
+dotnet_naming_style.i_prefix.required_prefix = I
