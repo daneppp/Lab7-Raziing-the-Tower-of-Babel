@@ -7,9 +7,12 @@ root = true
 #### Core EditorConfig Options ####
 
 # Indentation and spacing
+indent_style = space
+indent_size = 4
 
 
 # New line preferences
+csharp_new_line_before_open_brace = all
 
 
 #### .NET Coding Conventions ####
@@ -80,9 +83,19 @@ root = true
 #### Naming styles ####
 
 # Naming rules
+dotnet_naming_rule.types_methods_pascal.severity = warning
+dotnet_naming_rule.types_methods_pascal.symbols = types_methods
+dotnet_naming_rule.types_methods_pascal.style = pascal_case
+dotnet_naming_rule.locals_camel.severity = warning
+dotnet_naming_rule.locals_camel.symbols = locals
+dotnet_naming_rule.locals_camel.style = camel_case
 
 
 # Symbol specifications
+dotnet_naming_symbols.types_methods.applicable_kinds = class, struct, interface, enum, method, property
+dotnet_naming_symbols.locals.applicable_kinds = local, parameter
 
 
 # Naming styles
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+dotnet_naming_style.camel_case.capitalization = camel_case
