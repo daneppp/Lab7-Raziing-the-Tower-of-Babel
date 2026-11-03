@@ -6,43 +6,49 @@ root = true
 
 #### Core EditorConfig Options ####
 
-
-
-
-
 # Indentation and spacing
+# RA
+indent_style = space
+# RA
+indent_size = 4
+#RA 
+tab_width = 4
 
 
 # New line preferences
+# RA
+csharp_new_line_before_open_brace = all
+# RA
+csharp_new_line_before_else = true
+# RA
+csharp_new_line_before_catch = true
+# RA
+csharp_new_line_before_finally = true
+# RA
+csharp_preserve_single_line_blocks = false
+# RA
+csharp_preserve_single_line_statements = false
 
 
 #### .NET Coding Conventions ####
 
 # Organize usings
 
-
 # this. and Me. preferences
-
 
 # Language keywords vs BCL types preferences
 
 # Parentheses preferences
 
-
 # Modifier preferences
-
 
 # Expression-level preferences
 
-
 # Field preferences
-
 
 # Parameter preferences
 
-
 # Suppression preferences
-
 
 # New line preferences
 
@@ -52,13 +58,11 @@ root = true
 
 # Expression-bodied members
 
-
 # Pattern matching preferences
-
 
 # Null-checking preferences
 #DP
-null_operator_enforcement = for_all_nullable_values;
+null_operator_enforcement = for_all_nullable_values
 #BAD: string userName = Report.GetAuthor();
  #GOOD: string? userName = Report.GetAuthor();
 
@@ -66,7 +70,7 @@ null_operator_enforcement = for_all_nullable_values;
 
 # Code-block preferences
 #DP
-class_comment_blocks = include_description_currentBugs;
+class_comment_blocks = include_description_currentBugs
 #BAD: 
     #*/
     #* Name:
@@ -78,10 +82,15 @@ class_comment_blocks = include_description_currentBugs;
     #* Current Bugs:
     #*/
 
+# SAM
+csharp_prefer_braces = true:warning
+
+# AK
+method_comment_blocks_contain = summary_of_method_and_parameters
+
 # Expression-level preferences
 
 # 'using' directive preferences
-
 
 # New line preferences
 
@@ -90,18 +99,25 @@ class_comment_blocks = include_description_currentBugs;
 # New line preferences
 
 # Indentation preferences
-
+#RA
+csharp_indent_block_contents = true
+#RA
+csharp_indent_braces = false
+#RA 
+csharp_indent_case_contents = true
+#RA
+csharp_indent_switch_labels = true
 
 # Space preferences
 
 # Wrapping preferences
 #DP
-max_general_line_length = 80;
+max_general_line_length = 80
 #BAD: Console.WriteLine("This is an example of a C# statement that exceeds eighty characters on a single line of code.");
  #GOOD: Console.WriteLine("This is an example of a C# statement that exceeds 
  #                        eighty characters on a single line of code.");
 #DP
-max_method_signature_line_length = 60;
+max_method_signature_line_length = 60
 #BAD: public static Task<Report?> GetAllReportAttributesFromDatabase(string author, string location, string birdType, string birdAttack, string notes) {}
  #GOOD: public static Task<Report?> GetAllReportAttributesFromDatabase(string author, 
  #                                  string location, string birdType, string birdAttack, string notes) {}
@@ -109,9 +125,62 @@ max_method_signature_line_length = 60;
 #### Naming styles ####
 
 # Naming rules
-
+# SAM
+dotnet_naming_rule.types_methods_pascal.severity = warning
+# SAM
+dotnet_naming_rule.types_methods_pascal.symbols = types_methods
+# SAM
+dotnet_naming_rule.types_methods_pascal.style = pascal_case
+# SAM
+dotnet_naming_rule.locals_camel.severity = warning
+# SAM
+dotnet_naming_rule.locals_camel.symbols = locals
+# SAM
+dotnet_naming_rule.locals_camel.style = camel_case
+# SAM
+dotnet_naming_rule.private_fields_underscore.severity = warning
+# SAM
+dotnet_naming_rule.private_fields_underscore.symbols = private_fields
+# SAM
+dotnet_naming_rule.private_fields_underscore.style = underscore_camel
+# SAM
+dotnet_naming_rule.interfaces_i.severity = warning
+# SAM
+dotnet_naming_rule.interfaces_i.symbols = interfaces
+# SAM
+dotnet_naming_rule.interfaces_i.style = i_prefix
 
 # Symbol specifications
+# SAM
+dotnet_naming_symbols.types_methods.applicable_kinds = class, struct, interface, enum, method, property
+# SAM
+dotnet_naming_symbols.locals.applicable_kinds = local, parameter
+# SAM
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+# SAM
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+# SAM
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
 
 
 # Naming styles
+# SAM
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+# SAM
+dotnet_naming_style.camel_case.capitalization = camel_case
+# SAM
+dotnet_naming_style.underscore_camel.capitalization = camel_case
+# SAM
+dotnet_naming_style.underscore_camel.required_prefix = _
+# SAM
+dotnet_naming_style.i_prefix.capitalization = pascal_case
+# SAM
+dotnet_naming_style.i_prefix.required_prefix = I
+
+# SQL Conventions
+# AK
+SQL_keywords_always_capitalized = true
+# AK
+SQL_column_naming_convention = lowercase_and_underscores
+# AK
+SQL_function_calls_convention = upper_camel_case
