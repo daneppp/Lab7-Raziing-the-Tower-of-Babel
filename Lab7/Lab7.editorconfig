@@ -6,6 +6,10 @@ root = true
 
 #### Core EditorConfig Options ####
 
+
+
+
+
 # Indentation and spacing
 
 
@@ -53,11 +57,26 @@ root = true
 
 
 # Null-checking preferences
-
+#DP
+null_operator_enforcement = for_all_nullable_values;
+#BAD: string userName = Report.GetAuthor();
+ #GOOD: string? userName = Report.GetAuthor();
 
 # Modifier preferences
 
 # Code-block preferences
+#DP
+class_comment_blocks = include_description_currentBugs;
+#BAD: 
+    #*/
+    #* Name:
+    #* 
+    #*/
+ #GOOD: 
+    #*/
+    #* Description:
+    #* Current Bugs:
+    #*/
 
 # Expression-level preferences
 
@@ -76,6 +95,16 @@ root = true
 # Space preferences
 
 # Wrapping preferences
+#DP
+max_general_line_length = 80;
+#BAD: Console.WriteLine("This is an example of a C# statement that exceeds eighty characters on a single line of code.");
+ #GOOD: Console.WriteLine("This is an example of a C# statement that exceeds 
+ #                        eighty characters on a single line of code.");
+#DP
+max_method_signature_line_length = 60;
+#BAD: public static Task<Report?> GetAllReportAttributesFromDatabase(string author, string location, string birdType, string birdAttack, string notes) {}
+ #GOOD: public static Task<Report?> GetAllReportAttributesFromDatabase(string author, 
+ #                                  string location, string birdType, string birdAttack, string notes) {}
 
 #### Naming styles ####
 
