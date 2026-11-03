@@ -11,7 +11,6 @@ root = true
 indent_style = space
 # RA
 indent_size = 4
-
 #RA 
 tab_width = 4
 
@@ -31,34 +30,25 @@ csharp_preserve_single_line_blocks = false
 csharp_preserve_single_line_statements = false
 
 
-
 #### .NET Coding Conventions ####
 
 # Organize usings
 
-
 # this. and Me. preferences
-
 
 # Language keywords vs BCL types preferences
 
 # Parentheses preferences
 
-
 # Modifier preferences
-
 
 # Expression-level preferences
 
-
 # Field preferences
-
 
 # Parameter preferences
 
-
 # Suppression preferences
-
 
 # New line preferences
 
@@ -68,23 +58,39 @@ csharp_preserve_single_line_statements = false
 
 # Expression-bodied members
 
-
 # Pattern matching preferences
 
-
 # Null-checking preferences
-
+#DP
+null_operator_enforcement = for_all_nullable_values
+#BAD: string userName = Report.GetAuthor();
+ #GOOD: string? userName = Report.GetAuthor();
 
 # Modifier preferences
 
 # Code-block preferences
+#DP
+class_comment_blocks = include_description_currentBugs
+#BAD: 
+    #*/
+    #* Name:
+    #* 
+    #*/
+ #GOOD: 
+    #*/
+    #* Description:
+    #* Current Bugs:
+    #*/
+
 # SAM
 csharp_prefer_braces = true:warning
+
+# AK
+method_comment_blocks_contain = summary_of_method_and_parameters
 
 # Expression-level preferences
 
 # 'using' directive preferences
-
 
 # New line preferences
 
@@ -102,10 +108,19 @@ csharp_indent_case_contents = true
 #RA
 csharp_indent_switch_labels = true
 
-
 # Space preferences
 
 # Wrapping preferences
+#DP
+max_general_line_length = 80
+#BAD: Console.WriteLine("This is an example of a C# statement that exceeds eighty characters on a single line of code.");
+ #GOOD: Console.WriteLine("This is an example of a C# statement that exceeds 
+ #                        eighty characters on a single line of code.");
+#DP
+max_method_signature_line_length = 60
+#BAD: public static Task<Report?> GetAllReportAttributesFromDatabase(string author, string location, string birdType, string birdAttack, string notes) {}
+ #GOOD: public static Task<Report?> GetAllReportAttributesFromDatabase(string author, 
+ #                                  string location, string birdType, string birdAttack, string notes) {}
 
 #### Naming styles ####
 
@@ -135,7 +150,6 @@ dotnet_naming_rule.interfaces_i.symbols = interfaces
 # SAM
 dotnet_naming_rule.interfaces_i.style = i_prefix
 
-
 # Symbol specifications
 # SAM
 dotnet_naming_symbols.types_methods.applicable_kinds = class, struct, interface, enum, method, property
@@ -162,3 +176,11 @@ dotnet_naming_style.underscore_camel.required_prefix = _
 dotnet_naming_style.i_prefix.capitalization = pascal_case
 # SAM
 dotnet_naming_style.i_prefix.required_prefix = I
+
+# SQL Conventions
+# AK
+SQL_keywords_always_capitalized = true
+# AK
+SQL_column_naming_convention = lowercase_and_underscores
+# AK
+SQL_function_calls_convention = upper_camel_case
