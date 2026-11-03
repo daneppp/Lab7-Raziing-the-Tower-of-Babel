@@ -12,10 +12,24 @@ indent_style = space
 # SAM
 indent_size = 4
 
+#RA 
+tab_width = 4
+
 
 # New line preferences
 # SAM
 csharp_new_line_before_open_brace = all
+# RA
+csharp_new_line_before_else = true
+# RA
+csharp_new_line_before_catch = true
+# RA
+csharp_new_line_before_finally = true
+# RA
+csharp_preserve_single_line_blocks = false
+# RA
+csharp_preserve_single_line_statements = false
+
 
 
 #### .NET Coding Conventions ####
@@ -79,6 +93,14 @@ csharp_prefer_braces = true:warning
 # New line preferences
 
 # Indentation preferences
+#RA
+csharp_indent_block_contents = true
+#RA
+csharp_indent_braces = false
+#RA 
+csharp_indent_case_contents = true
+#RA
+csharp_indent_switch_labels = true
 
 
 # Space preferences
